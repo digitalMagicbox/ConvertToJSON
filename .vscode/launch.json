@@ -5,11 +5,33 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "PowerShell: Launch Current File",
+            "name": "PowerShell Launch INI File",
             "type": "PowerShell",
             "request": "launch",
-            "script": "${file}",
-            "cwd": "${file}",
+            "script": "./IniToJson.ps1",
+            "cwd": "./IniToJson.ps1",
+            "args": [
+                "./Input/Test.ini",
+                "./Output/ini.json"
+            ]
+        },
+        {
+            "name": "PowerShell Launch CSV File",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "./CsvToJson.ps1",
+            "cwd": "./CsvToJson.ps1",
+            "args": [
+                "./Input/Test.csv",
+                "./Output/csv.json"
+            ]
+        },
+        {
+            "name": "PowerShell Launch Registry File",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "./RegistryToJson.ps1",
+            "cwd": "./RegistryToJson.ps1",
             "args": [
                 "./Input/Test.reg",
                 "./Output/reg.json"
