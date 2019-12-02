@@ -1,4 +1,4 @@
-+Windows Registry Editor Version 5.00
+Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE¥¥Software¥¥SubKey1]
 "Key1"=dword:00000001
@@ -9,3 +9,5 @@
 "Key4"=dword:000000FF
 "Key5"="ABCDEFG"
 "Key6"="[]"
+
+[HKEY_CURRENT_USER¥¥Software¥¥SubKey3]
