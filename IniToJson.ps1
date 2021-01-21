@@ -26,6 +26,11 @@ while ($null -ne ($l = $fh.ReadLine())) {
         $keys = @{ }
         $l = "Section=" + $sec
     }
+
+    # エスケープ シーケンスとして扱われないように置換する。
+    # ConvertFrom-StringDataで変換エラーが発生する。
+    $l = $l -replace '\\', '\\'
+
     $keys += ConvertFrom-StringData($l)
 }
 $sections | ConvertTo-Json | Out-File -FilePath $jsonfilepath -Encoding UTF8 -Append
